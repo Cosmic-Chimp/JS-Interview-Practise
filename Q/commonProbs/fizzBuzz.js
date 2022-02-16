@@ -11,11 +11,13 @@
 
 // REVISE THIS PROBLEM MORE
 
-// for (i = 0; i < 100; )
-//   console.log((++i % 3 ? "" : "Fizz") + (i % 5 ? "" : "Buzz") || i);
+// for (i = 1; i <= 100; i++)
+//   console.log((i % 3 ? "" : "Fizz") + (i % 5 ? "" : "Buzz") || i);
 
-for (let j = 1; j <= 100; j++) {
-  let f = j % 3 == 0,
-    b = j % 5 == 0;
-  console.log(f ? (b ? "FizzBuzz" : "Fizz") : b ? "Buzz" : j);
-}
+// for (let j = 1; j <= 100; j++) {
+//   let f = j % 3 == 0,
+//     b = j % 5 == 0;
+//   console.log(f ? (b ? "FizzBuzz" : "Fizz") : b ? "Buzz" : j);
+// }
+
+for (i = 1; i <= 100; i++) console.log(i % 2 === 0 ? i : "not a multiple of 3");

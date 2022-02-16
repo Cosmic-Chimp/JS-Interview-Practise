@@ -6,7 +6,7 @@
 function isInt(num) {
   return num % 1 === 0;
 }
-console.log(isInt(0));
-console.log(isInt(1));
-console.log(isInt(12.1));
-console.log(isInt(0.1));
+console.log(isInt(0)); // true
+console.log(isInt(1)); // true
+console.log(isInt(12.1)); // false
+console.log(isInt(0.1)); // false
