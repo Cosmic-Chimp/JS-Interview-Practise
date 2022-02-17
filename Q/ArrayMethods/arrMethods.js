@@ -7,7 +7,7 @@ const salad = ["🍅", "🍄", "🥦", "🥒", "🌽", "🥕", "🥑"];
 // salad.push("🥜");
 
 // & if you want the elem to be added
-// //  at the start of the arr use .unshift() method
+//  at the start of the arr use .unshift() method
 // salad.unshift("🥜");
 
 // removing elems from arrs :

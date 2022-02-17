@@ -19,11 +19,11 @@ const counter = (() => {
 })();
 //IIFE: ()
 // this anon func is executed as soon as its defined
-console.log(counter.value());
-counter.increment();
+console.log(counter.value()); // 0
+counter.increment(); // 0 + 1
 // counter.increment();
-console.log(counter.value());
-counter.decrement();
-counter.decrement();
+console.log(counter.value()); // 1
+counter.decrement(); // 1 -1 === 0
+counter.decrement(); // 0 - 1 === -1
 
-console.log(counter.value());
+console.log(counter.value()); // -1

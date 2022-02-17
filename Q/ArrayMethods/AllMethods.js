@@ -129,9 +129,73 @@ console.log(evenNumberos); //logs [ 2, 4, 6, 8, 10 ]
 // fill
 // flat
 // flatMap
-// splice
+
+// ------------------------------------------------------
+
+// splice [mutates OG arr]
+const numrs = [1, 2, 3, 4, 5]; // replace 3 n 4 with a b
+numrs.splice(2, 2, "a", "b");
+console.log(numrs); // logs [ 1, 2, 'a', 'b', 5 ] = it changed OG arr
+
+// ------------------------------------------------------
+
 // keys
-// values
-// entries
-// sort
-// copyWithin
+const alpha = ["a", "b", "c", "d"];
+console.log(Object.keys(alpha)); // logs [ '0', '1', '2', '3' ] -> these are the idxs of the items
+// but
+console.log(alpha.keys()); // logs Object [Array Iterator] {}
+// can do the following :
+for (let item of alpha.keys()) {
+  console.log(item);
+} // logs idxs of items but not as strings within an arr but as numbers
+// if there are 'holes' in an array the keys method doesnt ignore them:
+const beta = ["d", "b", , "z"]; // has a hole between b and z
+for (let itm of alpha.keys()) {
+  console.log(itm);
+} // logs ALL the idx even the 'hole's' idx
+
+// ------------------------------------------------------
+
+// values [ same as keys above method BUT it
+// returns the actual values not the idx like keys method]
+
+// ------------------------------------------------------
+
+// entries [ basically keys + values] -> returns an array of boths idx and values
+
+// ------------------------------------------------------
+
+// sort [is Mutatative,changes OG arr]
+console.log(beta.sort()); // logs [ 'b', 'd', 'z', <1 empty item> ]
+let ages = [20, 29, 333, 24];
+ages.sort((a, b) => {
+  return b - a; // ascending order would be a - b
+});
+console.log(ages); // ages arr has been changed to [ 333, 29, 24, 20 ]
+// sort arr with objects ??:
+const people = [
+  {
+    name: "Goku",
+    age: 30,
+  },
+  {
+    name: "Vegeta",
+    age: 40,
+  },
+  {
+    name: "Broly",
+    age: 28,
+  },
+  {
+    name: "Whis",
+    age: 30000000000000,
+  },
+];
+people.sort((a, b) => {
+  return a.age - b.age; // ascending order
+});
+console.log(people);
+
+// ------------------------------------------------------
+
+// copyWithin [ mutates OG arr] -> revise this one later
